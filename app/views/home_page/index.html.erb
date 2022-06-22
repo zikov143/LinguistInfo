@@ -1,0 +1,21 @@
+<style>
+.textWidth
+{
+    width: 350px;
+}
+
+</style>  
+<div style="text-align:center">
+
+<h1>Extract the linguist information</h1>
+<p>Please provide an https:// URL</p>
+
+
+<%= form_tag extracted_info_path, method: :post do %>
+   <%= text_field_tag "url", nil, class: 'textWidth' %>
+   <%= submit_tag 'Extract' %>
+  
+ <% end %>
+
+ 
+</div>

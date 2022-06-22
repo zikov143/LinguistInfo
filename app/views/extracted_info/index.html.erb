@@ -1,0 +1,80 @@
+
+
+<%= form_tag saved_info_path, method: :post do %>
+
+<style>
+.textWidth
+{
+    width: 98%;
+}
+
+.labelWidth
+{
+    width: 20%;
+}
+
+.submitCenter
+{
+    width: 98%;
+}
+</style>   
+ 
+
+<div>
+<table border=1 style="width:50%; margin-right:auto; margin-left:auto">
+<tr>
+<td class="labelWidth">
+First Name
+</td>
+<td>
+<%= text_field_tag '@firstname', @firstname, class: 'textWidth' %>
+</td>
+</tr>
+<tr>
+<td class="labelWidth">
+Last Name
+</td>
+<td>
+<%= text_field_tag '@lastname', @lastname, class: 'textWidth' %>
+</td>
+</tr>
+<tr>
+<td class="labelWidth">
+Country
+</td>
+<td>
+<%= text_field_tag '@country', @country, class: 'textWidth' %>
+</td>
+</tr>
+<tr>
+<td class="labelWidth">
+Native language
+</td>
+<td>
+<%= text_field_tag '@nativeLanguage', @nativeLanguage, class: 'textWidth' %>
+</td>
+</tr>
+<tr>
+<td class="labelWidth">
+Target language
+</td>
+<td>
+<%= text_field_tag '@targetLanguages', @targetLanguages, class: 'textWidth' %>
+</td>
+</tr>
+<tr>
+<td class="labelWidth">
+Source
+</td>
+<td>
+<%= text_field_tag "@url", @url, readonly: true, class: 'textWidth' %>
+</td>
+</tr>
+</table>
+<br/>
+<div style="text-align: center">
+
+<%= submit_tag 'Save', class: '' %>
+</div>
+</div>
+ <% end %>
